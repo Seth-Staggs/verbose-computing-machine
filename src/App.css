@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
 :root {
   --primary-white: #f8f8ff;
   --primary-indigo: #6610f2;
-  --primary-dark: rgba(255,255,255, 0)
+  --primary-dark: rgba(255,255,255, 0);
+  --primary-lblue: #17a2b8;
 }
 body {
-  font-family: 'Geostar Fill', cursive !important;
+  font-family: 'Antic Slab', serif !important;
 }
 /* Navbar */
+nav{
+  z-index: 2;
+}
+
 .logo {
   width: 16.25rem;
 }
 
 /* Links */
 nav a.nav-link {
-  font-size: .8rem;
+  font-size: 1rem;
   letter-spacing: 0.0375rem;
   cursor: pointer;
 }
@@ -37,10 +42,98 @@ nav ul li {
   height: 8rem !important;
 }
 
+@media(max-width: 768px){
+  .navbar-brand{
+    width: 7rem;
+  }
+}
+
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
-  border-top: 0.1875rem solid var(--primary-indigo);
+  border-top: 0.1875rem solid var(--primary-lblue);
 }
 
 .navbar-nav > li > a:hover {
-  border-top: 0.1875rem solid var(--primary-indigo);
+  border-top: 0.1875rem solid var(--primary-lblue);
+}
+
+/* Header */
+
+.header-wraper {
+  position: relative;
+  background: url(./images/websitebackground.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+ 
+}
+
+.main-info h1 {
+  color: var(--primary-white);
+  text-transform: uppercase;
+}
+
+
+/* Typed Text */
+
+.typed-text{
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media(max-width: 768px){
+  .main-info h1{
+    font-size: 1.7rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Header Main Offer Button */
+
+.btn-main-offer {
+  border: 1px solid var(--primary-white);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+  z-index: 2;
+}
+
+.btn-main-offer:hover {
+  text-decoration: none;
+  background-color: var(--primary-lblue);
+  border: 1px solid var(--primary-lblue);
+  color: #6610f2;
+  transition: 0.2s ease-in-out;
+}
+
+/* Particles */
+
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
 }
