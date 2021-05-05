@@ -9,6 +9,8 @@
   --primary-dark: rgb(52,58,64);
   --primary-lblue: #17a2b8;
   --primary-black: #000;
+  --primary-green: green;
+  --primary-red: #ff0000;
 }
 body {
   font-family: 'Antic Slab', serif !important;
@@ -336,6 +338,10 @@ nav ul li {
   padding: 0 0.5rem;
 }
 
+.portfolio-wrapper h1 {
+ color: var(--primary-lblue);
+
+}
 .portfolio-image-box{
   position: relative;
   margin: 1rem;
@@ -377,13 +383,13 @@ nav ul li {
 
 .footer {
   background: var(--primary-black);
-  color: var(--primary-dgrey);
+  color: var(--primary-lgrey);
   padding: 3rem;
 }
 
 .footer a {
   text-decoration: none;
-  color: var(--primary-dgrey);  
+  color: var(--primary-lgrey);  
 }
 
 .footer a:hover {
@@ -395,3 +401,104 @@ nav ul li {
 .footer p {
   margin-bottom: 0;
 }
+
+/* Contacts */
+
+.contacts {
+  background: var(--primary-dark);
+  padding: 3rem 0;
+}
+
+.contacts h1 {
+  color: var(--primary-lblue);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contacts p {
+  color: var(--primary-lgrey);
+  font-size: 1.2rem;
+}
+
+.contacts input, .contacts textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-dgrey);
+  border-radius: 0;
+  color: var(--primary-lblue);
+  outline: 0 !important;
+  box-shadow: none imp !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contacts .container {
+  padding: 4rem 0;
+}
+
+.contacts input:focus, .contacts textarea:focus {
+  background: transparent;
+  color: var(--primary-lblue);
+  border-bottom: 0.125rem solid var(--primary-dgrey);
+}
+
+.contacts textarea {
+  height: 12.2rem !important;
+  
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0  !important;
+  width: 100%  !important;
+  background: none ;
+  border: 1px solid var(--primary-lblue);
+}
+
+.line {
+  position: relative;
+  top: -0.75rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-lblue);
+  display: inline-block;
+}
+
+input:focus+.line, textarea:focus+.line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control{
+  margin: -0.3rem 0;
+}
+
+textarea.form-control{
+  margin: -0.3rem 0;
+}
+
+.error-message {
+  color: var(--primary-white);
+  background: var(--primary-red);
+  text-align: left;
+}
+
+.success-message {
+  font-weight: 900;
+  color: var(--primary-green);
+}
+@media(max-width: 768px) {
+  .contacts{
+    overflow-x: hidden;
+  }
+  .contacts .container{
+    padding: 0 1rem;
+  }
+
+  .contacts p {
+    padding: 0 0.4rem;
+  }
+}
+

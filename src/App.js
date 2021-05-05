@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
    <AboutMe/>
    <Services/>
    <Experience/>
-   <Portfolio/>
+   {/* <Portfolio/> */}
+   <Contacts/>
    <Footer/>
    </>
   );

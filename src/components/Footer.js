@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import {
     FacebookShareButton,
@@ -18,7 +19,7 @@ export const Footer = () => {
                             <p>7210 Cascade Ct Apt 815 Fort Worth, TX 76137 </p>
                         </div>
                         <div className='d-flex'>
-                            <a href='tel:817-307-9082'>1(817)-307-9082</a>
+                            <a href="tel:+1-817-307-9082">817-307-9082</a>
                         </div>
                         <div className='d-flex'>
                             <p>Sethstaggs2@gmail.com</p>
@@ -38,7 +39,7 @@ export const Footer = () => {
                                 <br />
                                 <a className='footer-nav'>Portfolio</a>
                                 <br />
-                                <a className='footer-nav'>Contacts</a>
+                                <a className='footer-nav'>Contact Me</a>
                             </div>
                         </div>
                     </div>
