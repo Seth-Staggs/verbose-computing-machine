@@ -7,7 +7,8 @@ import {
     LinkedinIcon,
     TwitterShareButton,
     TwitterIcon
-} from 'react-share'
+} from 'react-share';
+import { Link } from 'react-scroll';
 
 export const Footer = () => {
     return (
@@ -15,9 +16,7 @@ export const Footer = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-4 col-md-6 col-sm-6'>
-                        <div className='d-flex'>
-                            <p>7210 Cascade Ct Apt 815 Fort Worth, TX 76137 </p>
-                        </div>
+                        
                         <div className='d-flex'>
                             <a href="tel:+1-817-307-9082">817-307-9082</a>
                         </div>
@@ -28,18 +27,18 @@ export const Footer = () => {
                     <div className='col-lg-3 col-md-2 col-sm-6'>
                         <div className='row'>
                             <div className='col'>
-                                <a className='footer-nav'>Home</a>
+                                <Link smooth={true} to='home' offset={-110} className='footer-nav'>Home</Link>
                                 <br />
-                                <a className='footer-nav'>About me</a>
+                                <Link smooth={true} to='about' offset={-110} className='footer-nav'>About me</Link>
                                 <br />
-                                <a className='footer-nav'>Services</a>
+                                <Link smooth={true} to='services' offset={-110} className='footer-nav'>Services</Link>
                             </div>
                             <div className='col'>
-                                <a className='footer-nav'>Experience</a>
+                                <Link smooth={true} to='experience' offset={-110} className='footer-nav'>Experience</Link>
                                 <br />
-                                <a className='footer-nav'>Portfolio</a>
+                                {/* <a className='footer-nav'>Portfolio</a> */}
                                 <br />
-                                <a className='footer-nav'>Contact Me</a>
+                                <Link smooth={true} to='contacts' offset={-110} className='footer-nav'>Contact Me</Link>
                             </div>
                         </div>
                     </div>
